@@ -84,11 +84,11 @@ class _CharacterScreenState extends State<CharacterScreen> {
                   fit: BoxFit.cover,
                   alignment: Alignment.center,
                   imageUrl:
-                      "https://genshin.jmp.blue/characters/${character!.queryName}/gacha-splash",
+                      "https://genshin.jmp.blue/characters/${character!.id}/gacha-splash",
                   errorWidget: (context, url, error) => CachedNetworkImage(
                       fit: BoxFit.cover,
                       imageUrl:
-                          "https://genshin.jmp.blue/characters/${character!.queryName}/icon-big"),
+                          "https://genshin.jmp.blue/characters/${character!.id}/icon-big"),
                   height: MediaQuery.of(context).size.height * 0.3,
                 ),
                 Expanded(
@@ -102,7 +102,7 @@ class _CharacterScreenState extends State<CharacterScreen> {
                           ),
                           image: DecorationImage(
                               image: CachedNetworkImageProvider(
-                                "https://genshin.jmp.blue/characters/${character!.queryName}/namecard-background",
+                                "https://genshin.jmp.blue/characters/${character!.id}/namecard-background",
                               ),
                               fit: BoxFit.cover,
                               alignment: Alignment.center),
@@ -203,7 +203,7 @@ class _CharacterScreenState extends State<CharacterScreen> {
                                     borderRadius: BorderRadius.circular(100),
                                     image: DecorationImage(
                                       image: CachedNetworkImageProvider(
-                                        "https://genshin.jmp.blue/characters/${character!.queryName}/talent-burst",
+                                        "https://genshin.jmp.blue/characters/${character!.id}/talent-burst",
                                       ),
                                       alignment: Alignment.center,
                                       fit: BoxFit.cover,
@@ -217,7 +217,7 @@ class _CharacterScreenState extends State<CharacterScreen> {
                                     borderRadius: BorderRadius.circular(100),
                                     image: DecorationImage(
                                       image: CachedNetworkImageProvider(
-                                        "https://genshin.jmp.blue/characters/${character!.queryName}/talent-na",
+                                        "https://genshin.jmp.blue/characters/${character!.id}/talent-na",
                                       ),
                                       alignment: Alignment.center,
                                       fit: BoxFit.cover,
@@ -231,7 +231,7 @@ class _CharacterScreenState extends State<CharacterScreen> {
                                     borderRadius: BorderRadius.circular(100),
                                     image: DecorationImage(
                                       image: CachedNetworkImageProvider(
-                                        "https://genshin.jmp.blue/characters/${character!.queryName}/talent-passive-0",
+                                        "https://genshin.jmp.blue/characters/${character!.id}/talent-passive-0",
                                       ),
                                       alignment: Alignment.center,
                                       fit: BoxFit.cover,
@@ -245,7 +245,7 @@ class _CharacterScreenState extends State<CharacterScreen> {
                                     borderRadius: BorderRadius.circular(100),
                                     image: DecorationImage(
                                       image: CachedNetworkImageProvider(
-                                        "https://genshin.jmp.blue/characters/${character!.queryName}/talent-passive-1",
+                                        "https://genshin.jmp.blue/characters/${character!.id}/talent-passive-1",
                                       ),
                                       alignment: Alignment.center,
                                       fit: BoxFit.cover,
@@ -259,7 +259,7 @@ class _CharacterScreenState extends State<CharacterScreen> {
                                     borderRadius: BorderRadius.circular(100),
                                     image: DecorationImage(
                                       image: CachedNetworkImageProvider(
-                                        "https://genshin.jmp.blue/characters/${character!.queryName}/talent-passive-2",
+                                        "https://genshin.jmp.blue/characters/${character!.id}/talent-passive-2",
                                       ),
                                       alignment: Alignment.center,
                                       fit: BoxFit.cover,
@@ -273,7 +273,7 @@ class _CharacterScreenState extends State<CharacterScreen> {
                                     borderRadius: BorderRadius.circular(100),
                                     image: DecorationImage(
                                       image: CachedNetworkImageProvider(
-                                        "https://genshin.jmp.blue/characters/${character!.queryName}/talent-skill",
+                                        "https://genshin.jmp.blue/characters/${character!.id}/talent-skill",
                                       ),
                                       alignment: Alignment.center,
                                       fit: BoxFit.cover,
