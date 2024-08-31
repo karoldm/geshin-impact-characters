@@ -1,6 +1,8 @@
-# genshin_impact
+<img src="assets/images/paimon.png" width="90px" />
 
-A new Flutter project.
+# Genshin Impact Characters
+
+App to display all characters of Genshin Impact and some informations about them.
 
 ## Getting Started
 
