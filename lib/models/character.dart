@@ -6,7 +6,7 @@ class Character {
   String nation;
   int rarity;
   String weapon;
-  String queryName;
+  String id;
 
   Character({
     required this.name,
@@ -16,7 +16,7 @@ class Character {
     required this.nation,
     required this.rarity,
     required this.weapon,
-    required this.queryName,
+    required this.id,
   });
 
   factory Character.fromJson(Map<String, dynamic> json) {
@@ -28,7 +28,7 @@ class Character {
       nation: json['nation'],
       rarity: json['rarity'],
       weapon: json['weapon'],
-      queryName: json['name']?.toLowerCase().replaceAll(' ', '-') ?? "",
+      id: json['id'],
     );
   }
 }
