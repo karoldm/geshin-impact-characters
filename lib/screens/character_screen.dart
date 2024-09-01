@@ -95,17 +95,26 @@ class _CharacterScreenState extends State<CharacterScreen> {
                   child: Stack(
                     children: [
                       Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(16),
+                            topRight: Radius.circular(16),
+                          ),
+                        ),
+                        height: MediaQuery.of(context).size.height * 0.7,
+                        child: ClipRRect(
                           borderRadius: const BorderRadius.only(
                             topLeft: Radius.circular(16),
                             topRight: Radius.circular(16),
                           ),
-                          image: DecorationImage(
-                              image: CachedNetworkImageProvider(
+                          child: CachedNetworkImage(
+                            imageUrl:
                                 "https://genshin.jmp.blue/characters/${character!.id}/namecard-background",
-                              ),
-                              fit: BoxFit.cover,
-                              alignment: Alignment.center),
+                            fit: BoxFit.cover,
+                            alignment: Alignment.center,
+                            errorWidget: (context, url, error) =>
+                                const SizedBox.shrink(),
+                          ),
                         ),
                       ),
                       Container(
@@ -196,88 +205,78 @@ class _CharacterScreenState extends State<CharacterScreen> {
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Container(
-                                  width: 40,
-                                  height: 40,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(100),
-                                    image: DecorationImage(
-                                      image: CachedNetworkImageProvider(
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(100),
+                                  child: CachedNetworkImage(
+                                    width: 40,
+                                    height: 40,
+                                    alignment: Alignment.center,
+                                    fit: BoxFit.cover,
+                                    imageUrl:
                                         "https://genshin.jmp.blue/characters/${character!.id}/talent-burst",
-                                      ),
-                                      alignment: Alignment.center,
-                                      fit: BoxFit.cover,
-                                    ),
+                                    errorWidget: (context, url, error) =>
+                                        const SizedBox.shrink(),
                                   ),
                                 ),
-                                Container(
-                                  width: 40,
-                                  height: 40,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(100),
-                                    image: DecorationImage(
-                                      image: CachedNetworkImageProvider(
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(100),
+                                  child: CachedNetworkImage(
+                                    imageUrl:
                                         "https://genshin.jmp.blue/characters/${character!.id}/talent-na",
-                                      ),
-                                      alignment: Alignment.center,
-                                      fit: BoxFit.cover,
-                                    ),
+                                    width: 40,
+                                    height: 40,
+                                    alignment: Alignment.center,
+                                    fit: BoxFit.cover,
+                                    errorWidget: (context, url, error) =>
+                                        const SizedBox.shrink(),
                                   ),
                                 ),
-                                Container(
-                                  width: 40,
-                                  height: 40,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(100),
-                                    image: DecorationImage(
-                                      image: CachedNetworkImageProvider(
+                                ClipRRect(
+                                  child: CachedNetworkImage(
+                                    imageUrl:
                                         "https://genshin.jmp.blue/characters/${character!.id}/talent-passive-0",
-                                      ),
-                                      alignment: Alignment.center,
-                                      fit: BoxFit.cover,
-                                    ),
+                                    width: 40,
+                                    height: 40,
+                                    alignment: Alignment.center,
+                                    fit: BoxFit.cover,
+                                    errorWidget: (context, url, error) =>
+                                        const SizedBox.shrink(),
                                   ),
                                 ),
-                                Container(
-                                  width: 40,
-                                  height: 40,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(100),
-                                    image: DecorationImage(
-                                      image: CachedNetworkImageProvider(
+                                ClipRRect(
+                                  child: CachedNetworkImage(
+                                    imageUrl:
                                         "https://genshin.jmp.blue/characters/${character!.id}/talent-passive-1",
-                                      ),
-                                      alignment: Alignment.center,
-                                      fit: BoxFit.cover,
-                                    ),
+                                    width: 40,
+                                    height: 40,
+                                    alignment: Alignment.center,
+                                    fit: BoxFit.cover,
+                                    errorWidget: (context, url, error) =>
+                                        const SizedBox.shrink(),
                                   ),
                                 ),
-                                Container(
-                                  width: 40,
-                                  height: 40,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(100),
-                                    image: DecorationImage(
-                                      image: CachedNetworkImageProvider(
+                                ClipRRect(
+                                  child: CachedNetworkImage(
+                                    imageUrl:
                                         "https://genshin.jmp.blue/characters/${character!.id}/talent-passive-2",
-                                      ),
-                                      alignment: Alignment.center,
-                                      fit: BoxFit.cover,
-                                    ),
+                                    width: 40,
+                                    height: 40,
+                                    alignment: Alignment.center,
+                                    fit: BoxFit.cover,
+                                    errorWidget: (context, url, error) =>
+                                        const SizedBox.shrink(),
                                   ),
                                 ),
-                                Container(
-                                  width: 40,
-                                  height: 40,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(100),
-                                    image: DecorationImage(
-                                      image: CachedNetworkImageProvider(
+                                ClipRect(
+                                  child: CachedNetworkImage(
+                                    imageUrl:
                                         "https://genshin.jmp.blue/characters/${character!.id}/talent-skill",
-                                      ),
-                                      alignment: Alignment.center,
-                                      fit: BoxFit.cover,
-                                    ),
+                                    width: 40,
+                                    height: 40,
+                                    alignment: Alignment.center,
+                                    fit: BoxFit.cover,
+                                    errorWidget: (context, url, error) =>
+                                        const SizedBox.shrink(),
                                   ),
                                 ),
                               ],

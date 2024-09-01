@@ -21,14 +21,14 @@ class Character {
 
   factory Character.fromJson(Map<String, dynamic> json) {
     return Character(
-      name: json['name'],
-      description: json['description'],
-      title: json['title'],
-      vision: json['vision'],
-      nation: json['nation'],
-      rarity: json['rarity'],
-      weapon: json['weapon'],
-      id: json['id'],
+      name: json['name'] ?? "No name",
+      description: json['description'] ?? "No description",
+      title: json['title'] ?? "No title",
+      vision: json['vision'] ?? "No vision",
+      nation: json['nation'] ?? "Unknown",
+      rarity: json['rarity'] ?? 0,
+      weapon: json['weapon'] ?? "Unknown",
+      id: json['id'] ?? "",
     );
   }
 }
